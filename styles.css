@@ -1161,3 +1161,56 @@ em { font-family: var(--font-serif); font-style: italic; color: var(--purple-mid
   .hero-stats { gap: 1rem; padding: 1rem 1.2rem; }
   .stat-num { font-size: 1.4rem; }
 }
+
+
+/* ==========================================================
+   HERO LAYOUT FIX — 50/50 Desktop + Correct Mobile Order
+   (Only layout adjustments. No visual changes.)
+========================================================== */
+
+/* Desktop 50/50 centered */
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content,
+.hero-visual {
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  align-items: center;      /* centra el contenido dentro del 50% */
+  text-align: center;       /* centra el texto */
+}
+
+.hero-visual {
+  align-items: center;
+}
+/* Mobile order fix */
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content,
+  .hero-visual {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-visual {
+    order: 2;
+    margin-top: 3rem;
+  }
+}
