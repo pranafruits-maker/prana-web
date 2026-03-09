@@ -31,8 +31,7 @@
     <div class="nav-right">
       <div class="lang-switcher">
         <button class="lang-btn active" id="btnEs" onclick="setLang('es')">ES</button>
-        <span class="lang-sep">|</span>
-        <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+
       </div>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -445,7 +444,7 @@
       if (text) el.innerHTML = text;
     });
     document.getElementById('btnEs').classList.toggle('active', lang === 'es');
-    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+
   }
 
   // ── Sticky Navbar ──
